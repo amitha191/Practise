@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Practise</title>
+</head>
+<body>
+    <script>
+        var a=10;
+        console.log(a);
+
+        //Let keyword - cannot be redeclared, must be declared before use, have a block scope
+
+        let let1= 10; console.log(let1);
+        {
+        let let1= 20; // Let variable can be redeclared in a block
+        console.log(let1);
+        }
+        console.log(let1); // thought it is given a value 20 it will not take outside the block.
+
+
+        // Variable Hoisting - we can initialize the variable without declaring it in the beginning we can declare it later also.
+        carName= "Volvo";
+        console.log(carName);
+        var carName;
+        
+        // Variable defined with let are alos hoisted but not initialized. Means it gives ReferenceError.
+        // carName="Volvo";
+        // console.log(carName);
+        // let carName ;
+
+        // Const keyword - We cannot reassign, redeclare, have block scope. But we can change elements of const array and properties of constant object.
+        const cars= ["Saab", "Volvo"];
+        console.log(cars);
+
+        cars[0]="Toyota";
+        cars.push("Audi");
+        console.log(cars);
+
+        //We cannot reassign the array:
+        const cars1= ["Saab", "Volvo"];
+        // cars=["Toyota", "Volvo", "Audi"]; // This will give an error
+
+        //Operators - (===)This will compare the equal value and type 
+
+
+        let x=(10 * 'Amitha');
+        console.log(typeof x);
+
+        //Function with parameters
+        // function greet(name){
+        //     console.log("Hello " + name + ":)");
+        // }
+        // greet("amitha");
+        // let name =prompt("Enter a name: ");
+        // greet(name);
+
+        //Returning value from the function
+
+        function sub(a,b){
+            return a-b;
+        }
+        var result= sub(5,4);
+        console.log(result);
+
+        //Function Expressions - In js functions can also be declared as a expressions.
+
+        let x1= function square(a){ return a*a};
+        console.log(x1(6));
+
+        let y=x1(7);
+        console.log(y);
+
+    
+        //Objects - JavaScript objects are containers for named values called properties.
+        const person={firstName: "Amitha", lastName: "Eleti", age:23, eyecolor:"blue"};
+        console.log(person);
+        person.lastName;
+        person["lastName"];
+
+        //Object Methods
+        const person1={firstName: "Amitha", lastName: "Eleti", age:23, eyecolor:"blue", fullName: function(){return this.firstName + " " + this.lastName;}};
+        console.log(person1.fullName);
+
+
+    </script>
+</body>
+</html>
