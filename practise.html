@@ -84,6 +84,52 @@
         const person1={firstName: "Amitha", lastName: "Eleti", age:23, eyecolor:"blue", fullName: function(){return this.firstName + " " + this.lastName;}};
         console.log(person1.fullName);
 
+        
+        //Arrays  Array Methods
+        var a = [1,2,3,4,5,6,7,8,9,10];
+        var b = [3,1,8,5,35,,,,67,365,445,4,6];
+        var c = ["Amitha", "Afrin", "Nagalakshmi"];
+        var d = ["Hemanth","Rahul", "Dharmendra"];
+
+        const freshers = c.concat(d);
+        console.log(freshers);
+
+        a.push(11);
+        console.log(a);
+        a.pop();
+        console.log(a);
+        
+        a.unshift(0);   //It adds the new element to the beginning of the array.
+        console.log(a);
+        a.shift();      //It removes the first element of the array
+        console.log(a);
+
+        c.splice(1,3);    //It will remove the any elements between the array.
+        console.log(c);
+
+        const res= d.slice(1,3);  //It will return the sub array as specified.
+        console.log(res);
+        console.log(d);
+
+        var ind=b.indexOf(365);
+        console.log(ind);
+
+        var res1= b.filter(function(value){return value>50;})  //It will return the elements of the array as condition specified in the array.
+        console.log(res1);
+
+        var res2= b.map(function(value){ return value +20;})  //It will return the original array with the condition specified.
+        console.log(res2);
+
+        var res3= b.join("-"); //It return array in the form of string using the delimeter specified.
+        console.log(res3);
+
+        //For loop
+        for(let i=0;i<freshers.length;i++){
+            console.log(freshers[i]);
+        }
+        //foreach
+
+       b.forEach(function(value) { console.log(value);});
 
     </script>
 </body>
